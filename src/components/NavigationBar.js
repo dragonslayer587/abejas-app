@@ -29,23 +29,23 @@ import Nav from 'react-bootstrap/Nav';
 // 		)
 // 	}
 // }
-function NavigationBar (props) {
+function NavigationBar ({ goToPage }) {
 	return (
 		<header>
 			<Navbar bg='light' expand='lg' >
 				{/* <Nav > */}
-					<Navbar.Brand href="#home"><b>Apiarios Wainz</b></Navbar.Brand>
-					<Nav.Item>
-						<Nav.Link href="/">Home</Nav.Link>
+					<Navbar.Brand><b>Apiarios Wainz</b></Navbar.Brand>
+					<Nav.Item onClick={() => goToPage('Home')}>
+						<Nav.Link>Home</Nav.Link>
 					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="">Colmenares</Nav.Link>
+					<Nav.Item onClick={() => goToPage('Apiaries')}>
+						<Nav.Link >Colmenares</Nav.Link>
 					</Nav.Item>
-					<Nav.Item>
-						<Nav.Link href="">Informes y Costos</Nav.Link>
+					<Nav.Item onClick={() => goToPage('Logs')}>
+						<Nav.Link >Informes y Costos</Nav.Link>
 					</Nav.Item>	
-					<Nav.Item>
-						<Nav.Link href="">Contactos</Nav.Link>
+					<Nav.Item onClick={() => goToPage('Contacts')}>
+						<Nav.Link >Contactos</Nav.Link>
 					</Nav.Item>	
 				{/* </Nav> */}
 			</Navbar>

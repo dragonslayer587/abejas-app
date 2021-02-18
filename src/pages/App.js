@@ -1,21 +1,27 @@
-import './App.css';
-// import ActivityLog from "../components/ActivityLog";
 import React from 'react';
 import NavigationBar from '../components/NavigationBar';
 import Contact from '../components/Contact';
-// import ActivityLog from '../components/ActivityLog';
-// import {useState} from 'react';
+import ActivityLog from '../components/ActivityLog';
+import {useState} from 'react';
+
+function routes(page) {
+  switch (page) {
+    case 'Logs':
+      return <ActivityLog />  
+    case 'Contacts':
+      return <Contact />
+    default:
+      return null
+  }
+}
 
 function App() {
-  // const [page, setPage] = useState('ActivityLog')
-
+  const [page, setPage] = useState('Logs')
   return (
     <div>
-      <NavigationBar />
+      <NavigationBar goToPage={setPage} />
       <div className="bodyApp" >
-        {/* <button onClick={()=>{setPage()}} >boton 1 </button>
-        <button>boton 2 </button> */}
-        <Contact />
+        {routes(page)}
       </div>
     </div>
   );
