@@ -1,23 +1,26 @@
 import React from "react";
-import Table from  "react-bootstrap/Table";
+import Table from "react-bootstrap/Table";
 
-// const activityLogObj = {
-//     date:'02-02-2020',
-//     colmenar:'TVE',
-//     motive:'revision Invierno'
-// }
+// test object
+const activityLogsData = [
+	{
+		id:1,
+		date:'02/01/2021',
+		colmenar:'TVE',
+		motive:'Primer cosecha',
+		otherInfo:""
+	},
+	{
+		id:2,
+		date:'01/01/2021',
+		colmenar:'LAZ',
+		motive:'Reponiendo materiales',
+		otherInfo:"Hacia alta calor!"
+	},
+]
 
-// function eventLog ( ){
-// 	this.date = Date('01/01/2020')
-// }
-
-// const activityLogs = [
-// 	{
-
-// 	}
-// ]
-
-function ActivityLog (props) {
+const ActivityLog = () => {
+// function ActivityLog () {
 	return (
 		<div>
 		<h2>Activity Log</h2>
@@ -31,14 +34,16 @@ function ActivityLog (props) {
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-				<td>1</td>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
+				{activityLogsData.map(item => (
+				<tr key={item.id}>
+					<td>{ item.date}</td>
+					<td>{ item.colmenar}</td>
+					<td>{ item.motive}</td>
+					<td>{ item.otherInfo}</td>
 				</tr>
+				))}
 			</tbody>
-		</Table>
+		</Table>						
 		</div>
 	)
 }

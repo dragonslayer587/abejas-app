@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-console.log('hola');
 // class NavigationBar extends React.Component{
 // 	render(){
 // 		return (
@@ -34,16 +33,8 @@ function NavigationBar (props) {
 	return (
 		<header>
 			<Navbar bg='light' expand='lg' >
-				<Navbar.Brand href="#home">
-					<img
-						alt=""
-						src="../images/honeycomb.svg"
-						width="60"
-						height="60"
-					/>{' '}
-					Apiarios Wainz
-				</Navbar.Brand>
-				<Nav >
+				{/* <Nav > */}
+					<Navbar.Brand href="#home"><b>Apiarios Wainz</b></Navbar.Brand>
 					<Nav.Item>
 						<Nav.Link href="/">Home</Nav.Link>
 					</Nav.Item>
@@ -56,7 +47,7 @@ function NavigationBar (props) {
 					<Nav.Item>
 						<Nav.Link href="">Contactos</Nav.Link>
 					</Nav.Item>	
-				</Nav>
+				{/* </Nav> */}
 			</Navbar>
 		</header>
 	)
