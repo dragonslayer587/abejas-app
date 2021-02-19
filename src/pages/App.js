@@ -1,6 +1,6 @@
 import React from 'react';
 import NavigationBar from '../components/NavigationBar';
-import Contact from '../components/Contact';
+import Contact from './Contact';
 import ActivityLog from '../components/ActivityLog';
 import {useState} from 'react';
 

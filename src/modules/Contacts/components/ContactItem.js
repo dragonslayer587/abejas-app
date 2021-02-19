@@ -14,24 +14,23 @@ const ContactItem = ({contactItem}) => {
   return (
     <>
     <ListGroup.Item key={contactItem.id}>
-          <Accordion>
-            <Card>
-              <Accordion.Toggle as={Card.Header} eventKey="0">
-                <b>{contactItem.colmenar} - {contactItem.name}, {contactItem.role}</b>
-              </Accordion.Toggle>
-              <Accordion.Collapse eventKey="0">
-                <AccordionBody>
-                    <p>Número {contactItem.telephone}</p>
-                    <ButtonGroup aria-label="Basic example">
-                      <Button variant="warning">Editar</Button>
-                      <Button variant="danger">Borrar</Button>
-                    </ButtonGroup>
-                </AccordionBody>
-              </Accordion.Collapse>
-            </Card>
-          </Accordion>
-        </ListGroup.Item>
-    
+      <Accordion>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="0">
+            <b>{contactItem.colmenar} - {contactItem.name}, {contactItem.role}</b>
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="0">
+            <AccordionBody>
+                <p>Número {contactItem.telephone}</p>
+                <ButtonGroup aria-label="Basic example">
+                  <Button variant="warning">Editar</Button>
+                  <Button variant="danger">Borrar</Button>
+                </ButtonGroup>
+            </AccordionBody>
+          </Accordion.Collapse>
+        </Card>
+      </Accordion>
+    </ListGroup.Item>
     </>
   )
 }
