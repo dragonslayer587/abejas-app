@@ -9,8 +9,6 @@ const ContactList = ({contacts}) => {
     {contacts.map(contactItem => <ContactItem contactItem={contactItem}/>)}
   </ListGroup>
   </>
-    
-
   )
 }
 

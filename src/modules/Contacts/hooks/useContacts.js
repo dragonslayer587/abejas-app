@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 const contactsInfo = [
 	{
 		id:1,
-		name:'Monkey D. Luffy',
+		name:'Testing Name',
 		role:'Capataz/Dueño',
 		colmenar:'TVE',
     telephone:'123456789',
@@ -11,7 +11,7 @@ const contactsInfo = [
 	},
 	{
 		id:2,
-		name:'Ronoroa Zoro',
+		name:'Otro nombre',
 		role:'Segundo al mando',
 		colmenar:'LAZ',
     telephone:'123456789',

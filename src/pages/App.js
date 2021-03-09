@@ -1,7 +1,7 @@
 import React from 'react';
 import NavigationBar from '../components/NavigationBar';
 import Contact from './Contact';
-import ActivityLog from '../components/ActivityLog';
+import ActivityLog from './ActivityLog'
 import {useState} from 'react';
 
 function routes(page) {
