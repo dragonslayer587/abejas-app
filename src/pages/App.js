@@ -1,35 +1,29 @@
-// import './App.css';
-import { Web3ReactProvider } from '@web3-react/core'
-import NavigationBar from '../components/NavigationBar'
-import CharacterMint from '../pages/CharacterMint'
-import PotionMint from '../pages/PotionMint'
-import { useState } from 'react'
-import { providers } from 'ethers'
+import React from 'react';
+import NavigationBar from '../components/NavigationBar';
+import Contact from './Contact';
+import ActivityLog from './ActivityLog'
+import {useState} from 'react';
 
 function routes(page) {
   switch (page) {
-    case 'CharacterMint':
-      return <CharacterMint />
-      case 'PotionMint':
-        return <PotionMint />
+    case 'Logs':
+      return <ActivityLog />  
+    case 'Contacts':
+      return <Contact />
     default:
       return null
   }
 }
 
-function getLibrary(provider) {
-  return new providers.Web3Provider(provider)
-}
-
 function App() {
-  const [page, setPage] = useState('CharacterMint')
+  const [page, setPage] = useState('Logs')
   return (
-    <Web3ReactProvider getLibrary={getLibrary}>
+    <div>
       <NavigationBar goToPage={setPage} />
       <div className="bodyApp" >
         {routes(page)}
       </div>
-    </Web3ReactProvider>
+    </div>
   );
 }
 
