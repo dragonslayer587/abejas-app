@@ -4,6 +4,7 @@ import Contact from './Contact';
 import ActivityLog from './ActivityLog'
 import {useState} from 'react';
 
+
 function routes(page) {
   switch (page) {
     case 'Logs':
